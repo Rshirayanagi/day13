@@ -1,10 +1,12 @@
 class PoemsController < ApplicationController
-  before_action :set_poem, only: [:show, :edit, :destroy]
+  before_action :set_poem, only: [:show, :edit, :destroy, :update]
 
   # GET /poems
   # GET /poems.json
   def index
     @poems = Poem.all
+    #binding.pry #pryの検証用ストッパー
+    #raise #better_errors用のストッパー
   end
 
   # GET /poems/1
@@ -69,6 +71,6 @@ class PoemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def poem_params
-      params.require(:poem).permit(:content, :auther)
+      params.require(:poem).permit(:title, :content, :auther)
     end
 end

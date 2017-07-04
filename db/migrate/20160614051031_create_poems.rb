@@ -3,7 +3,7 @@ class CreatePoems < ActiveRecord::Migration
     create_table :poems do |t|
       t.string :title
       t.text :content
-      t.string :auther
+      t.string :auther #著者
 
       t.timestamps null: false
     end

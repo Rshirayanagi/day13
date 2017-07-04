@@ -20,6 +20,7 @@ default: &default
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+  template: template0 #postgresでDBを作成する時に標準的な機能を利用するためのcloud9上での設定
 
 development:
   <<: *default
