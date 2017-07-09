@@ -7,6 +7,7 @@ class PoemsController < ApplicationController
     @poems = Poem.all
     #binding.pry #pryの検証用ストッパー
     #raise #better_errors用のストッパー
+    render json: @poems
   end
 
   # GET /poems/1
